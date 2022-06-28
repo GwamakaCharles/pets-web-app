@@ -1,23 +1,25 @@
-/* eslint-disable linebreak-style */
-/* eslint-disable no-undef */
-/* eslint-disable import/no-unresolved */
 /* eslint-disable no-param-reassign */
-/* eslint-disable no-unused-vars */
-import { createSlice } from '@reduxjs/toolkit';
-import { IPets } from 'interfaces';
 
+import { createSlice } from "@reduxjs/toolkit";
+
+// Initial state
 const initialState = {
   pets: [],
 };
+
+//  Creates a slice called `pets` with an initial state of `initialState`
 const pets = createSlice({
-  name: 'pets',
+  name: "pets",
   initialState,
   reducers: {
-    petsInfos(state, action) {
-      console.log('action', action);
+    // Creates a reducer called `petsInfos` that takes the state and an action as arguments.
+    petsInfos(state: any, action: any) {
+      console.log("action", action);
       state.pets = action.payload;
     },
-    petById(state, action) {
+
+    // Creates a reducer called `petById` that takes the state and an action as arguments.
+    petById(state: any, action: any) {
       const res = state.pets.filter((el: any) => {
         return el.id === parseInt(action.payload, 10);
       });

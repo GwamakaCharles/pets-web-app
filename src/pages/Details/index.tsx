@@ -3,7 +3,7 @@
 /* eslint-disable linebreak-style */
 /* eslint-disable no-unused-vars */
 /* eslint-disable import/no-unresolved */
-import React from "react";
+import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { petById } from "store/slices/pets";
@@ -20,7 +20,7 @@ const Details: React.FC<{}> = () => {
   const pet = useSelector((store: { pets: any }) => store.pets);
   const dispatch = useDispatch();
 
-  React.useEffect(() => {
+  useEffect(() => {
     dispatch(petById(id));
   }, []);
 

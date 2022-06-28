@@ -1,7 +1,6 @@
-/* eslint-disable linebreak-style */
-/* eslint-disable max-len */
-import React from 'react';
+import React from "react";
 
+// eslint-disable-next-line max-len
 const Categories: React.FC<{ iconPath: string, alt: string, children: any }> = ({ iconPath, alt, children }) => {
   return (
     <div className="my-4">
