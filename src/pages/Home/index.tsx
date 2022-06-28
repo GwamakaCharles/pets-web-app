@@ -63,7 +63,7 @@ const Home: React.FC<{}> = () => {
       <h1 className="font-bold lg:text-2xl mb-4 px-3 md:px-0 text-xl">
         Pets
       </h1>
-      <SearchBar placeholder="Search for pets" border="border" answers={[...state.pets.slice(0, 3)]} wsize="md:w-3/5 w-9/12" space="px-3 md:px-0" hsize="h-40" />
+      <SearchBar placeholder="Search for pets" border="border" answers={[...state.pets.slice(0, 2)]} wsize="md:w-3/5 w-9/12" space="px-3 md:px-0" hsize="h-40" />
       <h2 className="font-bold text-xl px-3 md:px-0 my-4">Results</h2>
       {/* Pets Results */}
       <div className="md:px-0 px-3">

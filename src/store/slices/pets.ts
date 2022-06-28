@@ -14,7 +14,6 @@ const pets = createSlice({
   reducers: {
     // Creates a reducer called `petsInfos` that takes the state and an action as arguments.
     petsInfos(state: any, action: any) {
-      console.log("action", action);
       state.pets = action.payload;
     },
 
@@ -24,7 +23,6 @@ const pets = createSlice({
         return el.id === parseInt(action.payload, 10);
       });
       state.pets = res;
-      console.log(JSON.stringify(res));
     },
   },
 });

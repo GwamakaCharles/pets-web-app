@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import React, { useState } from "react";
 
 function SearchBar({
@@ -23,7 +24,6 @@ function SearchBar({
   const [AutoCompleteBorder, setAutoCompleteBorder] = useState("");
 
   const search = (e: any) => {
-    console.log(e.target.value);
     if (e.target.value !== "") {
       setSearchBarBorder("");
       setShowAutoComplete("");

@@ -12,7 +12,6 @@ export const petsApi = createApi({
   endpoints: (builder) => ({
     pets: builder.query<IPets, any>({
       query: (arg) => {
-        console.log(`/${arg}`);
         return `/${arg}`;
       },
     }),
